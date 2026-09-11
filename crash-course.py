@@ -61,8 +61,8 @@ print(isEqual)
 # LOGICAL OPERATORS
 # In order of precedence: 1. not (opposite boolean/"flip it")     2. and     3. or
 
-f = False # Cancels out True when using and
 t = True  # Cancels out False when using or
+f = False # Cancels out True when using and
 
 print(not f) #True
 print(f and t) #False
@@ -93,3 +93,62 @@ print(math.sqrt(16)) # square root
 print(math.ceil(3.65)) # ceiling (round up)
 print(math.floor(8.94)) # floor (round down)
 print(math.pow(2, 4)) # "to the POWer of" 
+# . = "run this function (sqrt) in this library (math)"
+
+#CONDITIONALS
+
+#if    else   elif
+
+t = True
+f = False 
+
+if f: 
+    print("Reached the first condition")
+elif t:
+    print("Reached second condition")
+else: 
+    print("Reached else")
+
+# stops running code when one of the conditions become true (top to bottom) | if none are true it resorts to "else"
+
+if 1 > 1 and 1 == 1:  # False
+    print("Reached the first condition")
+elif 6 == 7 or 2 != 3: # True
+    print("Reached second condition") # --> Stop code here since conditions have been met and print
+elif 9 != 0:
+    print("Reached third condition")
+else: 
+    print("Reached else")
+
+# LISTS
+# A list can hold any type, and can grow or shrink at any time
+
+nums = [427, 5, 12, 16, 0]
+#index   0   1   2   3  4  (ALWAYS start at 0)
+
+print(nums[2]) # print(list[index])
+print(nums[0])
+print(nums[-3]) # wraps back around/goes backwards in list
+print(nums[0] + nums[2])
+
+nums[0] = "Stanley"
+print(nums)
+
+# LIST METHODS
+# Special built-in methods
+
+words = []
+
+words.append("My") # append = "add something to the end"
+words.append("name")
+words.append("is")
+words.append("Nobody")
+print(words)
+
+words.remove("Nobody")
+words.insert(3, "Odysseus")
+print(words)
+words[3] = "Ozymandias"
+print(words)
+length = len(words)
+print(length)
