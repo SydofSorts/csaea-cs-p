@@ -26,9 +26,9 @@ print(a, b, c, d)
 # // (division rounded to the nearest whole number)
 
 # =  (assigning/setting a data type to a variable)
-# += (add value to variable and updates its value)
-# -= (subtract value from variable and updates its value)
-# /= (divides value from variable and updates its value)
+# += (add value to variable and updates/reassigns its value)
+# -= (subtract value from variable and updates/reassigns its value)
+# /= (divides value from variable and updates/reassigns its value)
 
 e = 3 - 1
 e /= 2
@@ -157,4 +157,47 @@ print(length)
 # For Loop
 # A for loop will iterate over a RANGE
 # A range is a range of numbers
-# range(stop), range(start, stop), range (start, stop, step)
+# range(stop), range(start, stop), range (start, stop, step) | Step = "counting by"
+
+# i = individual element(s)/index
+for i in range(5):
+    print(i)
+
+# list variable = [element, element, element]
+animals = ["sheep", "deer", "moose"]
+
+for animal in animals:
+    print(f"We saw {animal}")
+
+nums = [5.1, 3.4, 4.6, 6.8, 9.3, 1.2]
+
+# for number in nums:
+#     print(number + 1)
+
+for i in range(len(nums)):
+    print(nums[i])
+
+# Debugging 
+
+# print(len(nums))
+# print(range(5))
+
+# for i in range(inclusive, exclusive) | inclusive (include this index); exclusive (exclude this index)
+# for i in range(0,5):
+#     print(nums[i])
+
+# While Loop
+# iterates while a condition is true
+# when the condition becomes false, it stops
+
+x = 5
+
+while x < 10:
+    print(x)
+    x += 1
+
+t = True
+f = False
+
+while t or f:
+    print("hi")
