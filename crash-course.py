@@ -138,13 +138,12 @@ print(nums)
 # Special built-in methods
 
 words = []
-
+#list.method(argument)
 words.append("My") # append = "add something to the end"
 words.append("name")
 words.append("is")
 words.append("Nobody")
 print(words)
-
 words.remove("Nobody")
 words.insert(3, "Odysseus")
 print(words)
@@ -152,3 +151,10 @@ words[3] = "Ozymandias"
 print(words)
 length = len(words)
 print(length)
+
+# ITERATION
+
+# For Loop
+# A for loop will iterate over a RANGE
+# A range is a range of numbers
+# range(stop), range(start, stop), range (start, stop, step)
