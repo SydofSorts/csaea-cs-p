@@ -20,7 +20,7 @@ if integer == 1:
 
 # CHALLENG #4: REPORT CARD
 
-score = 50
+score = 70
 
 if score >= 90:
    print("A")
@@ -33,7 +33,40 @@ elif score < 70 and score >= 60:
 else:
    print("F")
 
-# CHALLENGE #15: CLASS PASS RATE
+# CHALLENGE #2: PIZZA ORDER
+
+students = 23
+slices_per_student = 2
+slices_per_pizza = 8
+
+exact_number_of_pizzas = (students*slices_per_student)/slices_per_pizza
+whole_pizzas = math.ceil(exact_number_of_pizzas)
+extra_slices = int(whole_pizzas*8 - exact_number_of_pizzas*8)
+
+print(f"Order {whole_pizzas} pizzas\nExtra Slices: {extra_slices}")
+
+# CHALLENGE #3: TEMPERATURE CONVERTER
+
+fahrenheit = 212
+celsius_conversion = (fahrenheit - 32) * 5 / 9
+
+print(f"{fahrenheit} F is {celsius_conversion} C")
+
+# CHALLENGE #20: SPEED TRAP
+
+speed_limit = 55
+speed = 71
+
+if speed <= speed_limit:
+   print("Good job, keep up the safe driving")
+elif speed >= speed_limit + 1 and speed <= speed_limit + 10:
+   print("Warning: Slow down and drive safe")
+elif speed >= speed_limit + 10 and speed <= speed_limit + 20:
+   print("Fine: $100")
+else:
+   print("Fine: $250")
+
+
 
 
 
