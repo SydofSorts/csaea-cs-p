@@ -103,5 +103,5 @@ else:
 number = 7
 
 for integer in range(1, 11):
-   total = integer * number 
-   print(f"{number} x {integer} = {total}")
+   print(f"{number} x {integer} = {integer * number}")
+
