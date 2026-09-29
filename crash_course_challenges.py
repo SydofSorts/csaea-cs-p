@@ -66,13 +66,42 @@ elif speed >= speed_limit + 10 and speed <= speed_limit + 20:
 else:
    print("Fine: $250")
 
+# CHALLENGE 5: LOGIN SCREEN
 
+password = "csaea2026"
+attempt = "CSAEA2026"
 
+if attempt == password:
+   print("Access granted")
+else:
+   print("Access denied")
 
+# CHALLENGE 7: ROLLER COASTER GATE
 
+height = 50
+age = 8
+has_adult = True
 
+if height >= 48 and age >= 10:
+   print("You may ride!")
+elif height >= 48 and age < 10 and has_adult == True:
+   print("You may ride!")
+else:
+   print("You may not ride.")
 
+# CHALLENGE #6: EVEN/ODD PARKING:
 
+plate = 4827
 
+if plate % 2 == 0:
+   print("Park on the east side")
+else:
+   print("Park on the west side")
 
+# CHALLENGE 12: TIMES TABLE HELPER
 
+number = 7
+
+for integer in range(1, 11):
+   total = integer * number 
+   print(f"{number} x {integer} = {total}")
