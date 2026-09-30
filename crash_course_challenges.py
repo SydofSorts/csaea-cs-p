@@ -10,10 +10,13 @@ print(f"Tip:{tip}\nTotal:{total}" )
 
 # CHALLENGE 11: ROCKET LAUNCH 
 
+import time
+
 start = 10
 
 for integer in range(start, 0, -1):
    print(integer)
+   time.sleep(1)
 
 if integer == 1:
    print("Liftoff!")
