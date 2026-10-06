@@ -10,3 +10,10 @@ print("Once upon a time and a very good time it was there was a moocow coming do
 "road and this moocow that was down along the road met a nicens little boy named baby tuckoo")
 print()
 print("a")
+print("5" + "5")
+
+# INTEGERS
+
+print(42)
+print(-23)
+print(5 + 5 - 11)
