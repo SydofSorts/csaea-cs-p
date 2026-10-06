@@ -17,3 +17,8 @@ print("5" + "5")
 print(42)
 print(-23)
 print(5 + 5 - 11)
+
+#BOOLEANS
+
+print(True + True) # 1
+print(False) # 0
