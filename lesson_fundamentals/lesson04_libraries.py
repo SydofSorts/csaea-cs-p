@@ -56,8 +56,54 @@ step3 = step2 % 10
 result = math.ceil(step3)
 print("Your random num is:", result)
 
+# Simple version:
+
+seed = 76743
+
+for n in range(5):
+    calcs = seed + 2234 * 22 / 3
+    randint = math.ceil(calcs)
+    print(f"Simple random num gen: {randint % 10}")
+    seed += 1
 
 
+# Pythons random library 
+
+import random
+
+random_integer = random.randint(1,100)
+print(random_integer)
+
+random_float = random.random()
+print(random_float)
+
+pets = ["cat", "rabbit", "dog", "parrot"]
+
+random_selection = random.choice(pets)
+print(random_selection)
+
+random.shuffle(pets)
+print(pets)
+
+# Challenge 2: Simulate a Die Roll
+
+die_roll = random.randint(1, 6)
+print(f"You landed on {die_roll}!")
+
+# Challenge 3: Random Square Root
+
+num = random.randint(1, 75)
+num_sqrt = math.sqrt(num)
+num_int = math.ceil(num_sqrt)
+print(f"Random Number:{num}\nRandom Number SQRT:{num_sqrt}\nRandom Number SQRT -> Integer:{num_int}")
+
+# Challenge 4: Power Roll
+
+base = random.randint(1, 6)
+exponent = random.randint(1, 6)
+power_roll = int(math.pow(base, exponent))
+
+print(f"Die 1 (Base):{base}\nDie 2 (Exponent):{exponent}\nResult:{power_roll}")
 
 
 
