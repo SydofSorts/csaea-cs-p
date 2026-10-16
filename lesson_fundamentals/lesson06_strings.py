@@ -41,23 +41,59 @@ print("Length of string:", length)
 
 # Challenge 1: Favorite Quote
 
-quote = input("Enter your favorite quote: ")
-quote_length = len(quote)
-print(f"Your quote is {quote_length} characters long.")
+# quote = input("Enter your favorite quote: ")
+# quote_length = len(quote)
+# print(f"Your quote is {quote_length} characters long.")
 
 
-# Challenge 2: 
+# # Challenge 2: 
 
-word = input("Enter a word that is at least 7 character long: ")
-print("The second through sixth characters in your word are:", word[1:6])
-
-
-# Challenge 3: Name Formatter
-
-first_name = input("Enter your first name: ")
-last_name = input("Enter your last name: ")
-print(f"Formatted name: {last_name}, {first_name}")
+# word = input("Enter a word that is at least 7 character long: ")
+# print("The second through sixth characters in your word are:", word[1:6])
 
 
+# # Challenge 3: Name Formatter
+
+# first_name = input("Enter your first name: ")
+# last_name = input("Enter your last name: ")
+# print(f"Formatted name: {last_name}, {first_name}")
 
 
+character = "rEd gUY"
+print("\nLowercase:", character.lower())
+print("Uppercase:", character.upper())
+print("Capitalize first letter:", character.capitalize())
+print("Title format:", character.title())
+
+print()
+
+# Find and replace text 
+
+sentence = "We live in an actual NIGHTMAREEE!"
+new_sentence = sentence.replace("NIGHTMAREEE", "dream")
+print(sentence)
+print(new_sentence)
+
+# Join and Split
+
+groceries = "milk,eggs,bread,butter,peanuts"
+print("\nOriginal string:", groceries)
+
+# Split the string into a Python list, based on a 'delimiter'
+
+items = groceries.split(",") 
+print(items)
+
+# Join a list back together into a string
+
+joined = " and ".join(items)
+print(joined)
+
+print(type(items))
+print(type(joined))
+
+
+# Challenge 4: Word Mutation
+
+user_word = input("Enter a word: ")
+print(f"Uppercase: {user_word.upper()}\nLowercase: {user_word.lower()}\nBackwards: {user_word[::-1]}")
