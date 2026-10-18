@@ -19,13 +19,13 @@ verb1 = input("[12/23] Enter a past tense verb: ")
 object_adjective = input("[13/23] Enter an adjective: ")
 object = input("[14/23] Enter an object: ")
 length_of_time = input("[15/23] Enter a length of time: ")
-beast = input("[16/23] Enter an indefinite article (a/an) + animal: ")
+beast = input("[16/23] Enter an animal: ")
 beast_name = input("[17/23] Enter a name you would give to a pet: ")
 body_part = input("[18/23] Enter a body part: ")
-verb2 = input("[19/23] Enter a present tense verb: ")
+verb2 = input("[19/23] Enter a verb: ")
 animal = input("[20/23] Enter an indefinite article (a/an) + animal: ")
 verb3 = input("[21/23] Enter a past tense verb: ")
-emotion = input("[22/23] Enter an emotion: ")
+emotion = input("[22/23] Enter an emotion: ") # Doesn't work with words like "happy", "sad", "angry"
 last_word = input("[23/23] Enter any word: ")
 
 
@@ -34,7 +34,7 @@ last_word = input("[23/23] Enter any word: ")
 story = print(f"\tThere once lived {adjective1.lower()} knight known throughout the kingdom of {kingdom_name.title()} as Sir\n"
               f"{knight_name.title()} the {knight_title.title()}. He had done many {adjective2.lower()} deeds in his time, which had\n"
               f"gotten him much recognition. He'd rescued {noun1.lower()} trapped in {noun2.lower()}, fought {noun3.lower()} with only\n"
-              f"{noun4}, and once took on an army of {number.lower()} {plural_noun.lower()} on his own…and won. However, it\n"
+              f"{noun4.lower()}, and once took on an army of {number.lower()} {plural_noun.lower()} on his own…and won. However, it\n"
               f"was his final quest that cemented him in the history of {kingdom_name.title()} forever.\n"
               f"\t Sir {knight_name.title()} {verb1.lower()} everywhere across the country in search of the {object_adjective.title()}\n"
               f"{object.title()}, an relic said to be able to bring the dead back to Earth and pull the living down to\n"
