@@ -42,10 +42,10 @@ story = print(f"\tThere once lived {adjective1.lower()} knight known throughout 
               f"mourning and desire for vengeance, that whoever brought the {body_part.title()} of {beast_name.title()} to\n"
               f"him as well as the {object_adjective.title()} {object.title()} would be granted a wish. Sir {knight_name.title()} had\n"
               f"dreamed of being able to {verb2.lower()} like {animal.lower()}. It had been this dream that willed him to\n"
-              f"{kingdom_name.title()}, even as he suffered in anguish. When he reached the throne room, he fell\n"
-              f"before the king. Both the {object_adjective.title()} {object.title()} and the {body_part.title()} of {beast_name.title()}\n"
-              f"dropped from his hands. The king kneeled beside the fallen knight. He begged to\n"
-              f"know what it was Sir {knight_name.title()} wished. Sir {knight_name.title()} whispered but one word before\n"
-              f"he died of his flesh wounds. The King {verb3.lower()} when he heard it, and echoed\n"
-              f"it to all that witnessed the terrible scene. “{last_word.title()}”.")
+              f"{kingdom_name.title()}, even as he suffered in anguish.\n"
+              f"\tWhen he reached the throne room, he fell before the king. Both the {object_adjective.title()} {object.title()}"
+              f" and the {body_part.title()} of {beast_name.title()} dropped from his hands. The king kneeled beside the fallen knight.\n"
+              f"He begged to know what it was Sir {knight_name.title()} wished. Sir {knight_name.title()} whispered but one word before\n"
+              f"he died of his flesh wounds. The King {verb3.lower()} when he heard it, and echoed it to all that witnessed the terrible scene. \n"
+              f"“{last_word.title()}”.")
 
