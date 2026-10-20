@@ -1,7 +1,3 @@
-# Introduction Instructions
-
-
-
 # User Input Variables
 
 adjective1 = input("[1/22] Enter an indefinite article (a/an) + adjective: ") 
