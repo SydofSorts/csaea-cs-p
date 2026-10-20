@@ -22,7 +22,7 @@ length_of_time = input("[15/22] Enter a length of time: ")
 beast = input("[16/22] Enter an animal: ")
 beast_name = input("[17/22] Enter a name you would give to a pet: ")
 body_part = input("[18/22] Enter a body part: ")
-verb2 = input("[19/22] Enter a verb: ")
+verb2 = input("[19/22] Enter a present tense verb: ")
 verb2_2 = verb2.lower()
 if verb2_2 == "ran":
     verb2_2 = "run" 
@@ -50,6 +50,6 @@ story = print(f"\tThere once lived {adjective1.lower()} knight known throughout 
               f" and the {body_part.title()} of {beast_name.title()} dropped from his hands.\n"
               f"The king kneeled beside the fallen knight. He begged to know what it was Sir {knight_name.title()} wished.\n"
               f"Sir {knight_name.title()} whispered but one word before he died of his flesh wounds. The King {verb3.lower()}\n"
-              f"when he heard it, and echoed it to all that witnessed the terrible scene. "
+              f"when he heard it, and echoed it to all that witnessed the terrible scene.\n"
               f"“{last_word.title()}”.")
 
