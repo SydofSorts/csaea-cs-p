@@ -85,12 +85,6 @@ elif age >= 18:
 
 
 # Challenge 2: Leap Year
-# Ask for a year. It's a leap year if divisible by 4, EXCEPT century
-# years (divisible by 100), which must also be divisible by 400.
-# Example output:
-# Enter a year: 1900
-# 1900 is not a leap year.
-# (Test: 2024 -> leap, 1900 -> not, 2000 -> leap)
 
 user_year = input("Enter a year: ")
 year = int(user_year)
@@ -103,5 +97,7 @@ elif year % 100 == 0 and year % 4 == 0 and year  % 400 == 0:
     print("It is a leap year!")
 elif year % 100 == 0 and year % 4 == 0 and year  % 400 != 0:
     print("It is not a leap year.")
+
+
 
 
