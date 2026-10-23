@@ -90,3 +90,11 @@ if "dog" in animals:
     print("Dog is in the list")
 else:
     print("Dog is not in the list :(")
+
+### Challenge 3: Number Stats
+
+measurements = [4.27, 8.7777, 1.1, 35.7, 0.3636]
+print("Length of list:", len(measurements))
+print("Minimum:", min(measurements))
+print("Maximum:", max(measurements))
+print("Sum", sum(measurements))
