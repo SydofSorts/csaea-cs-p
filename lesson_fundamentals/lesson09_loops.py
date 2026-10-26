@@ -81,7 +81,6 @@ for i in range (1,11):
 
 
 # Challenge 2: Guess Until Correct
-# Create a while-loop that keeps asking for a number until the user types 7.
 
 user_num = ""
 
