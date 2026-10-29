@@ -62,5 +62,11 @@ print(f"{distance1}\n{distance2}\n{distance3}\n{distance4}")
 # First parameter:  the number i want doubled
 # Second paramater: how many times the loop should run 
 
-
     
+def doubler(num,times):
+    num_list = []
+    for i in range(times):
+        num = num * 2
+        num_list.append(num)
+
+
