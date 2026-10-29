@@ -11,29 +11,29 @@ import time
 animals = ["rabbit", "fish", "parrot", "dog", "cat"]
 print("My animals:", animals)
 
-#for animal in animals:
-    #print("I shall now pet a", animal)
-    #time.sleep(1) # pause for half a second
+for animal in animals:
+    print("I shall now pet a", animal)
+    time.sleep(1) # pause for half a second
 
 # We can loop a specific number of times using range(start[inclusive], stop[exclusive], step).
 # Common to use "i" as placeholder variable, meaning index
 
-# for i in range(5):
-#     print("Counting", i)
+for i in range(5):
+     print("Counting", i)
 
-# for num in range(1, 11, 3):
-#     print("Numbers be like:", num)
+for num in range(1, 11, 3):
+     print("Numbers be like:", num)
 
-# fav_word = "Kipsulheris"
-# print(fav_word)
-# letter_list = []
+fav_word = "Kipsulheris"
+print(fav_word)
+letter_list = []
 
-# for letter in fav_word:
-#     print(letter)
-#     letter_list.append(letter + "!")
-#     time.sleep(0.427)
+for letter in fav_word:
+    print(letter)
+    letter_list.append(letter + "!")
+    time.sleep(0.427)
 
-# print(letter_list)
+print(letter_list)
 
 # Challenge 1: Sum Calculator
 
@@ -52,17 +52,17 @@ print("Sum:",sum)
 
 # count = 0 
 
-# while count < 5:
-#     print(f"Loopin' -- We are on loop index # {count}")
-#     count += 1
-#     time.sleep(0.5)
+while count < 5:
+    print(f"Loopin' -- We are on loop index # {count}")
+    count += 1
+    time.sleep(0.5)
 
 # Example with user input 
 
-# user_input = ""
+user_input = ""
 
-# while user_input != "exit":
-#         user_input = input("Type 'exit' to leave this place: ")
+while user_input != "exit":
+        user_input = input("Type 'exit' to leave this place: ")
 
 # Loop Control Statements
 
@@ -86,3 +86,4 @@ user_num = ""
 
 while user_num != "7":
     user_num = input("Give me a number: ")
+
