@@ -56,17 +56,64 @@ distance3 = is_far(7)
 distance4 = is_far(20)
 print(f"{distance1}\n{distance2}\n{distance3}\n{distance4}")
 
-# I want to create a function that takes in a number and doubles it, then adds it to a list.
-# The function should also take in a number of times that we should double the number
-# Write a function named doubler(num, ) that has TWO parameters: 
-# First parameter:  the number i want doubled
-# Second paramater: how many times the loop should run 
 
-    
+# Doubler Challenge
+
 def doubler(num,times):
     num_list = []
     for i in range(times):
         num = num * 2
         num_list.append(num)
+
+    print(num_list)  # (Added while watching Mr. Harrell's example)
+    return num_list # (Added while watching Mr.Harrell's example)
+
+doubler(1, 5)
+
+
+# Challenge 1: Calculator
+
+def adder(a, b):
+    return a + b
+
+sum = adder(1,7)
+print(sum)
+
+def subtracter(a, b):
+    return a - b
+
+difference = subtracter(5, 6)
+print(difference)
+
+def divider(a, b):
+    return a/b
+
+quotient = divider(27, 3)
+print(quotient)
+
+def multiplier(a, b):
+    return a*b
+
+product = multiplier(5, 3)
+print(product)
+
+# Challenge 2: Average
+
+def average (a, b, c, d, e):
+    return (a+b+c+d+e)/5
+
+avrg_inpt = average(1, 2, 3, 4, 7)
+print(avrg_inpt)
+
+# Challenge 3: Even or Odd
+
+def is_even(a):
+    if a % 2 == 0:
+        return print("Even")
+    else:
+        return print("Odd")
+
+num = is_even(9)
+
 
 
