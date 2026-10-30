@@ -116,4 +116,33 @@ def is_even(a):
 num = is_even(9)
 
 
+# Challenge 4
+# Use the pseudocode below to write code:
+# Make a function called "analyze_word" that counts how many vowels and consonants are in a word
+# Tools: uses a for loop, IF/THEN statement, "aeiou".
+
+# The function analyze_word accepts one argument, a single word (string):
+# Initialize two variables:
+# vowelCount set to 0
+# consonantCount set to 0
+# Use a loop to iterate through each character in the word.
+# Inside the loop, use an IF/ELSE statement:
+# If the character is a vowel (a, e, i, o, u), increment vowelCount.
+# Otherwise, increment consonantCount.
+# After the loop ends: 
+# 	return a string that states how many vowels and how many consonants are in the word.
+
+# Call the function with a sample one-word string and print the returned result outside the function
+
+def analyze_word(word):
+    vowelCount = 0
+    consonantCount = 0
+    for letter in word:
+        if letter == ["a", "e", "i", "o", "u"]:
+            vowelCount += 1
+            return print(f"Your word has {vowelCount} vowels")
+
+word = analyze_word("cat")
+print(word)
+
 
