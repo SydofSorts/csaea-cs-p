@@ -46,5 +46,16 @@ expl_list = ["string", 427, 3.14159, True]
 expl_list.append(8.99)
 print(expl_list)
 
+nums = [3, 7, 1, 9, 4, 2, 5, 8, 6, 0]
+print("Numbers:", nums)
+
+print("Length of list:", len(nums))
+print("Min:", min(nums))
+print("Max:", max(nums))
+print("Sum", sum(nums))
+print(nums[3])
+
+last_num = nums.pop()
+print(nums)
 
 
