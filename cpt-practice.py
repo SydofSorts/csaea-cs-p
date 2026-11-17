@@ -1,20 +1,21 @@
-import time 
+import random 
 
-inventory = ["bed",]
-
-Gus = inventory.pop()
-Lynne = inventory.pop()
-Paval = inventory.pop()
-Okoro = inventory.pop()
-Aspasia = inventory.pop()
-Jovie = inventory.pop()
-
-customers = [Gus, Lynne, Paval, Okoro, Aspasia, Jovie]
+# Player's goal is to get $1,000
 
 
-def customer_satisfaction (item_given):
-    if item_given == customers:#[index][index]
-	    return print("Thank you!")
-    else:
-	    return print("This isn't what I wanted. So much for psychic…")
+goal = 0
+wallet = random.randint(1, 20)
+inventory = ["phone", wallet, "chapstick", "car keys", "coupon", "wired earbuds"]
 
+def selling():
+    
+
+# 1. Checks item given by user (item must be string)
+# 2. Gives random price (rand.int)
+# 3. Prints price
+# 4. User can haggle higher
+# 5. If user haggles higher
+#       chance (%50)
+#           if user gets a higher price:
+#               print("I suppose that's fair.")
+#               chance becomes half of what it was before
