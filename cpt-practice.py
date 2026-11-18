@@ -1,21 +1,35 @@
 import random 
+import time
 
-# Player's goal is to get $1,000
+# Player's goal is to get $10,000
 
 
-goal = 0
+player_savings = 0
+player_inventory = []
+items_sold = []
 wallet = random.randint(1, 20)
-inventory = ["phone", wallet, "chapstick", "car keys", "coupon", "wired earbuds"]
+pocket = ["phone", wallet, "chapstick", "car keys", "coupon", "wired earbuds"]
 
-def selling():
+def haggle(haggle_answer):
+    if haggle_answer == "yes":
+
+        
+        
+
+def selling(items_sold):
+    for item in items_sold:
+        if item == "phone":
+            given_price = random.randint(300.00, 900.00)
+            print(f"I'll give you {given_price} dollars.")
+            
+            haggle_answer = input(f"Would you like to haggle?\nNote: Haggle is double or nothing. Is it worth it?")
+            if haggle_answer == "yes":
+
+
+
     
 
-# 1. Checks item given by user (item must be string)
-# 2. Gives random price (rand.int)
-# 3. Prints price
-# 4. User can haggle higher
-# 5. If user haggles higher
-#       chance (%50)
-#           if user gets a higher price:
-#               print("I suppose that's fair.")
-#               chance becomes half of what it was before
+
+
+
+
