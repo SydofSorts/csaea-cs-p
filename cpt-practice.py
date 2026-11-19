@@ -10,20 +10,32 @@ items_sold = []
 wallet = random.randint(1, 20)
 pocket = ["phone", wallet, "chapstick", "car keys", "coupon", "wired earbuds"]
 
-def haggle(haggle_answer):
-    if haggle_answer == "yes":
+def haggle(number):
+    coinflip_chance = random.randint(1, 4)
+    if coinflip_chance == 3:
+        new_price = number * 2
+        print(f"You drive a hard bargain. And I give a fair price. I'll give you {new_price} dollars.")
+        print(f"You've gained {new_price}")
+        player_savings += new_price
 
         
         
-
 def selling(items_sold):
     for item in items_sold:
         if item == "phone":
             given_price = random.randint(300.00, 900.00)
             print(f"I'll give you {given_price} dollars.")
             
-            haggle_answer = input(f"Would you like to haggle?\nNote: Haggle is double or nothing. Is it worth it?")
-            if haggle_answer == "yes":
+            haggle_answer = input("Would you like to haggle?")
+            if haggle_answer.lower() == "yes":
+               number = input(f"Enter previously given price: ")
+               if number != given_price:
+                   print("That ain't the price I gave you.")
+                   number = input(f"Enter previously given price: ")
+                
+                   
+                              
+                
 
 
 
