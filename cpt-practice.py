@@ -41,7 +41,9 @@ def selling(items_sold):
                 print(f"You've gained ${given_price}")
                 player_savings += given_price
             else:
-                
+                print(f"I need a clear 'yes' or 'no', kid.")
+                haggle_answer = input("Would you like to haggle?")
+            
                                    
                                    
                    
