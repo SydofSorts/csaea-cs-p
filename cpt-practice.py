@@ -15,11 +15,14 @@ def haggle(number):
     if coinflip_chance == 3:
         new_price = number * 2
         print(f"You drive a hard bargain. And I give a fair price. I'll give you {new_price} dollars.")
-        print(f"You've gained {new_price}")
+        print(f"You've gained ${new_price}")
         player_savings += new_price
+    else:
+        print(f"No can do. I gave you a fair price.")
+        player_savings += number
+        
 
-        
-        
+
 def selling(items_sold):
     for item in items_sold:
         if item == "phone":
@@ -29,9 +32,20 @@ def selling(items_sold):
             haggle_answer = input("Would you like to haggle?")
             if haggle_answer.lower() == "yes":
                number = input(f"Enter previously given price: ")
-               if number != given_price:
+               if number == given_price:
+                   haggle(number)
+               else:
                    print("That ain't the price I gave you.")
                    number = input(f"Enter previously given price: ")
+            elif haggle_answer.lower() == "no":
+                print(f"You've gained ${given_price}")
+                player_savings += given_price
+            else:
+                
+                                   
+                                   
+                   
+            
                 
                    
                               
