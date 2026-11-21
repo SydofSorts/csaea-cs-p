@@ -3,8 +3,8 @@ import time
 
 # Player's goal is to get $10,000
 player_savings = 0
+steal_counter = 0
 player_inventory = []
-items_selling = []
 items_sold = []
 pocket = ["phone", "wallet", "chapstick", "car keys", "coupon", "wired earbuds"]
 
@@ -23,7 +23,7 @@ def haggle(number):
 # If the player haggles or not
 def haggle_check(given_price, haggle_answer):
     if haggle_answer.lower() == "yes":
-        number = input(f"Enter previously given price: ")
+        number = input(f"Enter previously given price (no dollar sign): ")
         if number == given_price:
             haggle(number)
         else:
@@ -37,22 +37,68 @@ def haggle_check(given_price, haggle_answer):
         haggle_answer = input("Would you like to haggle?")
 
 # What the player is selling
-def selling(items_selling):
-    for item in items_selling:
+def selling(player_inventory):
+    for item in player_inventory:
         if item == "a phone":
-            given_price = random.randint(300.00, 900.00)
-            print(f"I'll give you {given_price} dollars.")
+            player_inventory.pop(0)
+            given_price = round(random.uniform(300.00, 900.00), 2)
+            print(f"Impressive. I'll give you {given_price} dollars.")
             
             haggle_answer = input("Would you like to haggle?")
             haggle(given_price, haggle_answer)
+            items_sold.append(item)
+        elif item == "wallet":
+            player_inventory.pop(0)
+            given_price = round(random.uniform(1.00, 50.00), 2)
+            print("I'll give you the cash in this wallet.")
+            print(f"You've gained ${given_price}.")
+            player_savings += given_price
+            items_sold.append(item)
+        elif item == "chapstick":
+             player_inventory.pop(0)
+             given_price = round(random.uniform(1.50, 2.50),2)
+             print(f"My lips are pretty dry. Could use this. I'll give you {given_price} dollars.")
+                        
+             haggle_answer = input("Would you like to haggle?")
+             haggle(given_price, haggle_answer)
+             items_sold.append(item)
+        elif item == "car keys":
+            player_inventory.pop(0)
+            given_price = round(random.uniform(100.00, 250.00),2)
+            print(f"These car keys are useless to me, but I'll give you {given_price} dollars.")
+                                    
+            haggle_answer = input("Would you like to haggle?")
+            haggle(given_price, haggle_answer)
+            items_sold.append(item)
+        elif item == "coupon":
+            player_inventory.pop(0)
+            given_price = round(random.uniform(1.00, 10.00), 2)
+            print(f"Not my favorite store, but I'll take it. I'll give you {given_price} dollars.")
+                                    
+            haggle_answer = input("Would you like to haggle?")
+            haggle(given_price, haggle_answer)
+            items_sold.append(item)
+        elif item == "wired earbuds":
+            player_inventory.pop(0)
+            given_price = round(random.uniform(5.00, 35.00),2)
+            print(f"I'll give you {given_price} dollars.")
+                                    
+            haggle_answer = input("Would you like to haggle?")
+            haggle(given_price, haggle_answer)
+            items_sold.append(item)
+        else:
+            print("I ain't buying this from you. How'd you get this anyway? Cheater.")
 
 
+
+# Game Introduction
 print("You are in debt to loansharks and need $10,000 to pay them off.")
 time.sleep(1)
 print("You don't have a job, but you're pretty sly.")
 time.sleep(1)
-print("Pick-pocket people to get items. Sell what you can to Dan. He'll give you cash.\n")
+print("Pick-pocket people to get items. Sell what you can to me. I'll give you cash for it.\n")
 
+# Main Loop
 running = True
 while running and player_savings < 10000:
     answer = input("Are you ready to do this?   ")
@@ -70,34 +116,32 @@ while running and player_savings < 10000:
         if player_ready.lower() == "yes":
             caught = random.randint(1,2)
             if caught == 1:
-                item_gotten = random.choice(pocket)
-                print(f"You got {item_gotten}.")
-                player_inventory.append(item_gotten)
-                print(player_inventory, "\n")
+                if steal_counter < 5:
+                    item_gotten = random.choice(pocket)
+                    print(f"You got {item_gotten}.")
+                    player_inventory.append(item_gotten)
+                    print(player_inventory, "\n")
+                    steal_counter += 1
+                elif steal_counter == 5:
+                    print("Your inventory is full, you should sell your items to me to make money.")
+                    sell_choice = input("Sell your items?   ")
+                    if sell_choice.lower() == "yes":
+                        selling(player_inventory)
+                        steal_counter = 0
+                    elif sell_choice.lower() == "no":
+                        print("You're pockets are stuffed, can't fit another penny. You'll be the one getting stolen from.")
+                        sell_choice = input("Sell your items?   ")
+                    else:
+                        print("Can't understand you, kid. Need a yes or no.")
+                        sell_choice = input("Sell your items?   ")
             else:
                 print("You got caught, but ran away just in time. Good thing that you're fast.\n")
         elif player_ready.lower() == "no":
             print("Your loss. Neither of your lives change.\n")
-
-
-
-
-
-    
-
-                                   
-                   
-            
-                
-                   
-                              
-                
-
-
-
-    
-
-
-
+        else:
+            print("You need to make a clear decision, kid. Yes or No?\n")
+            player_ready = input("Pick-pocket them?: ")
+    else:
+        print("You need to make a clear decision, kid. Yes or No?\n")
 
 
