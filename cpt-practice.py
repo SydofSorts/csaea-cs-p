@@ -52,25 +52,36 @@ time.sleep(1)
 print("You don't have a job, but you're pretty sly.")
 time.sleep(1)
 print("Pick-pocket people to get items. Sell what you can to Dan. He'll give you cash.\n")
-            
-while player_savings < 10000:
-    scenario = ["You see a woman jogging.", "You see a man sitting at a bus stop.", "You see a teen on their phone.",
-                "You see a couple laughing on a walk.", "You see a guy sleeping on a bench.", 
-                "You see a mother with three kids.", "You see a contruction worker.", "You see someone in a trenchcoat."]
-    print(random.choice(scenario))
-    player_ready = input("Pick-pocket them?: ")
-    if player_ready.lower() == "yes":
-        caught = random.randint(1,2)
-        if caught == 1:
-            item_gotten = random.choice(pocket)
-            print(f"You got {item_gotten}.")
-            player_inventory.append(item_gotten)
-            print(player_inventory, "\n")
-        else:
-            print("You got caught, but ran away just in time. Good thing that you're fast.\n")
-    elif player_ready.lower() == "no":
-        print("Your loss.\n")
-        
+
+running = True
+while running and player_savings < 10000:
+    answer = input("Are you ready to do this?   ")
+
+    if answer.lower() == "no":
+            print("You decide your fault doesn't give you the right to do harm. " 
+            "Maybe there are other ways to get out of this.")
+            running = False
+    elif answer.lower() == "yes":
+        scenario = ["You see a woman jogging.", "You see a man sitting at a bus stop.", "You see a teen on their phone.",
+                    "You see a couple laughing on a walk.", "You see a guy sleeping on a bench.", 
+                    "You see a mother with three kids.", "You see a contruction worker.", "You see someone in a trenchcoat."]
+        print(random.choice(scenario))
+        player_ready = input("Pick-pocket them?: ")
+        if player_ready.lower() == "yes":
+            caught = random.randint(1,2)
+            if caught == 1:
+                item_gotten = random.choice(pocket)
+                print(f"You got {item_gotten}.")
+                player_inventory.append(item_gotten)
+                print(player_inventory, "\n")
+            else:
+                print("You got caught, but ran away just in time. Good thing that you're fast.\n")
+        elif player_ready.lower() == "no":
+            print("Your loss. Neither of your lives change.\n")
+
+
+
+
 
     
 
