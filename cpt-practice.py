@@ -2,13 +2,11 @@ import random
 import time
 
 # Player's goal is to get $10,000
-
-
 player_savings = 0
 player_inventory = []
+items_selling = []
 items_sold = []
-wallet = random.randint(1, 20)
-pocket = ["phone", wallet, "chapstick", "car keys", "coupon", "wired earbuds"]
+pocket = ["phone", "wallet", "chapstick", "car keys", "coupon", "wired earbuds"]
 
 # If the haggling works or not
 def haggle(number):
@@ -39,9 +37,9 @@ def haggle_check(given_price, haggle_answer):
         haggle_answer = input("Would you like to haggle?")
 
 # What the player is selling
-def selling(items_sold):
-    for item in items_sold:
-        if item == "phone":
+def selling(items_selling):
+    for item in items_selling:
+        if item == "a phone":
             given_price = random.randint(300.00, 900.00)
             print(f"I'll give you {given_price} dollars.")
             
@@ -49,8 +47,33 @@ def selling(items_sold):
             haggle(given_price, haggle_answer)
 
 
+print("You are in debt to loansharks and need $10,000 to pay them off.")
+time.sleep(1)
+print("You don't have a job, but you're pretty sly.")
+time.sleep(1)
+print("Pick-pocket people to get items. Sell what you can to Dan. He'll give you cash.\n")
             
-                                   
+while player_savings < 10000:
+    scenario = ["You see a woman jogging.", "You see a man sitting at a bus stop.", "You see a teen on their phone.",
+                "You see a couple laughing on a walk.", "You see a guy sleeping on a bench.", 
+                "You see a mother with three kids.", "You see a contruction worker.", "You see someone in a trenchcoat."]
+    print(random.choice(scenario))
+    player_ready = input("Pick-pocket them?: ")
+    if player_ready.lower() == "yes":
+        caught = random.randint(1,2)
+        if caught == 1:
+            item_gotten = random.choice(pocket)
+            print(f"You got {item_gotten}.")
+            player_inventory.append(item_gotten)
+            print(player_inventory, "\n")
+        else:
+            print("You got caught, but ran away just in time. Good thing that you're fast.\n")
+    elif player_ready.lower() == "no":
+        print("Your loss.\n")
+        
+
+    
+
                                    
                    
             
