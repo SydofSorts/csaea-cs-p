@@ -122,13 +122,13 @@ while running and player_savings < 10000:
         if player_ready.lower() == "yes":
             caught = random.randint(1,2)
             if caught == 1:
-                if steal_counter < 5:
+                if steal_counter < 3:
                     item_gotten = random.choice(pocket)
                     print(f"You got {item_gotten}.")
                     player_inventory.append(item_gotten)
                     print(player_inventory, "\n")
                     steal_counter += 1
-                elif steal_counter == 5:
+                elif steal_counter == 3:
                     print("---------------------------------------------------------------------------")
                     time.sleep(1.5)
                     print("Your inventory is full, you should sell your items to me to make money.")
