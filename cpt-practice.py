@@ -25,8 +25,8 @@ def haggle(number, player_savings):
 # If the player haggles or not
 def haggle_check(given_price, haggle_answer, player_savings):
     if haggle_answer.lower() == "yes":
-        number = float(input(f"Enter previously given price (no dollar sign): "))
-        if (number) == given_price:
+        number = float((input(f"Enter previously given price (no dollar sign): ")))
+        if number == given_price:
             haggle(number, player_savings)
         else:
             print("That ain't the price I gave you.")
@@ -95,7 +95,7 @@ def selling(player_inventory, player_savings):
 
 
 # Game Introduction
-print("You are in debt to loansharks and need $10,000 to pay them off.")
+print("You are in debt to loansharks and need $10,000 as quick as possible to pay them off.")
 time.sleep(1)
 print("You don't have a job, but you're pretty sly.")
 time.sleep(1)
@@ -128,6 +128,7 @@ while running and player_savings < 10000:
                 elif steal_counter == 5:
                     print("Your inventory is full, you should sell your items to me to make money.")
                     sell_choice = input("Sell your items?   ")
+                    print("\n")
                     if sell_choice.lower() == "yes":
                         selling(player_inventory, player_savings)
                         steal_counter = 0
