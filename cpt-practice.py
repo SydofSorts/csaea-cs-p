@@ -26,7 +26,7 @@ def haggle(number, player_savings):
 def haggle_check(given_price, haggle_answer, player_savings):
     if haggle_answer.lower() == "yes":
         number = float(input(f"Enter previously given price (no dollar sign): "))
-        if number == given_price:
+        if (number) == given_price:
             haggle(number, player_savings)
         else:
             print("That ain't the price I gave you.")
@@ -71,7 +71,7 @@ def selling(player_inventory, player_savings):
             given_price = round(random.uniform(100.00, 250.00),2)
             print(f"These car keys are useless to me, but I'll give you {given_price} dollars.")
                                     
-            haggle_answer = input("Would you like to haggle?")
+            haggle_answer = input("Would you like to haggle?   ")
             haggle_check(given_price, haggle_answer, player_savings)
             items_sold.append(item)
         elif item == "coupon":
