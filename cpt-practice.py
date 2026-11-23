@@ -25,7 +25,7 @@ def haggle(number, player_savings):
 # If the player haggles or not
 def haggle_check(given_price, haggle_answer, player_savings):
     if haggle_answer.lower() == "yes":
-        number = float((input(f"Enter previously given price (no dollar sign): ")))
+        number = float((input(f"Enter previously given price AS A NUMBER (no dollar sign): ")))
         if number == given_price:
             haggle(number, player_savings)
         else:
