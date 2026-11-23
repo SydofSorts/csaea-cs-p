@@ -25,7 +25,10 @@ def haggle(number, player_savings):
 # If the player haggles or not
 def haggle_check(given_price, haggle_answer, player_savings):
     if haggle_answer.lower() == "yes":
+        print("---------------------------------------------------------------------------")
+        time.sleep(3)
         number = float((input(f"Enter previously given price AS A NUMBER (no dollar sign): ")))
+        print("---------------------------------------------------------------------------")
         if number == given_price:
             haggle(number, player_savings)
         else:
@@ -126,8 +129,11 @@ while running and player_savings < 10000:
                     print(player_inventory, "\n")
                     steal_counter += 1
                 elif steal_counter == 5:
+                    print("---------------------------------------------------------------------------")
+                    time.sleep(3)
                     print("Your inventory is full, you should sell your items to me to make money.")
                     sell_choice = input("Sell your items?   ")
+                    print("---------------------------------------------------------------------------")
                     print("\n")
                     if sell_choice.lower() == "yes":
                         selling(player_inventory, player_savings)
