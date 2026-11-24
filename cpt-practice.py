@@ -61,6 +61,7 @@ def selling(player_inventory, player_savings):
             print(f"You've gained ${given_price}.")
             player_savings += given_price
             items_sold.append(item)
+            selling(player_inventory, player_savings)
         elif item == "chapstick":
              player_inventory.pop(0)
              given_price = round(random.uniform(1.50, 2.50),2)
@@ -123,11 +124,11 @@ while running and player_savings < 10000:
             caught = random.randint(1,2)
             if caught == 1:
                 if steal_counter < 3:
+                    steal_counter += 1
                     item_gotten = random.choice(pocket)
                     print(f"You got {item_gotten}.")
                     player_inventory.append(item_gotten)
                     print(player_inventory, "\n")
-                    steal_counter += 1
                 elif steal_counter == 3:
                     print("---------------------------------------------------------------------------")
                     time.sleep(1.5)
